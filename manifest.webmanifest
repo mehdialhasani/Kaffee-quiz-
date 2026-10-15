@@ -1,7 +1,7 @@
 {
  "name": "Kaffee-Quiz",
  "short_name": "Kaffee-Quiz",
- "description": "Kaffeewissen in Ruhe üben: Barista, Röster, Pflanze und Anbau",
+ "description": "Kaffeewissen in Ruhe üben: Barista, Röster:in, Pflanze und Anbau",
  "start_url": "./",
  "scope": "./",
  "display": "standalone",
