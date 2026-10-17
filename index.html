@@ -681,7 +681,7 @@ html,body{margin:0}body{font-family:var(--font);background:var(--bg);color:var(-
 .gk-has .kk-none{display:none}
 @media (prefers-reduced-motion:reduce){.gk *,.gk-a{animation:none!important;transition:none!important}.gk .st{opacity:0}}
 /* Startseite als Bild (Entwurf 17.10.2026) – Präfix v4-, Keyframes v4k- */
-.v4-x{display:none!important}
+.v4-x,.qz.v4on>.modes,.qz.v4on>.kg-sec,.qz.v4on>.kk-sec,.qz.v4on>.ks-row,.qz.v4on>button.day,.qz.v4on>button.calmbtn{display:none!important}
 .qz.v4on{position:relative}
 .qz.v4on p.s{display:none}
 .v4-badge{position:absolute;right:0;top:4px;z-index:6;padding:6px 11px;border-radius:999px;font:600 11.5px var(--font);color:var(--ink);background:color-mix(in srgb,var(--card) 70%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--hair);pointer-events:none}
@@ -2086,7 +2086,8 @@ function build(){
   if(window.V4BADGE!==false&&!a.querySelector('.v4-badge'))a.prepend(el('div','v4-badge','Entwurf · '+({cafe:'Café',tal:'Kaffeetal',tisch:'Kaffeetisch'})[V]));
   first=false;
 }
-let q=0;const go=()=>{if(!q)q=setTimeout(()=>{q=0;build()},0)};
+// gleich im Beobachter bauen (vor dem nächsten Bild), sonst blitzt beim Stufenwechsel kurz die alte Liste auf
+const go=()=>build();
 const app=document.getElementById('qzapp');if(app){new MutationObserver(go).observe(app,{childList:true,subtree:true});go()}
 })();
 </script></body></html>
