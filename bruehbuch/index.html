@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Brühbuch ist umgezogen</title>
-<meta http-equiv="refresh" content="1;url=/Bruehbuch/">
+<meta http-equiv="refresh" content="1;url=/bruebuch-/">
 <style>body{margin:0;min-height:100vh;display:grid;place-items:center;font:16px -apple-system,system-ui,sans-serif;background:#f2ede6;color:#1d1d1f;text-align:center;padding:16px}a{color:#8a5a3b;font-weight:600}@media (prefers-color-scheme:dark){body{background:#151210;color:#f4efe9}a{color:#d69c66}}</style>
-</head><body><p>Das Brühbuch hat eine eigene Adresse.<br><a href="/Bruehbuch/">Zum Brühbuch</a></p>
+</head><body><p>Das Brühbuch hat eine eigene Adresse.<br><a href="/bruebuch-/">Zum Brühbuch</a></p>
 <script>
 // alten Service Worker unter /bruehbuch/ abmelden, dann weiter zur neuen Adresse (Daten bleiben, gleicher Origin)
-(navigator.serviceWorker?navigator.serviceWorker.getRegistrations().then(function(rs){return Promise.all(rs.filter(function(r){return r.scope.indexOf('/bruehbuch/')>=0}).map(function(r){return r.unregister()}))}):Promise.resolve()).catch(function(){}).then(function(){location.replace('/Bruehbuch/')});
+(navigator.serviceWorker?navigator.serviceWorker.getRegistrations().then(function(rs){return Promise.all(rs.filter(function(r){return r.scope.indexOf('/bruehbuch/')>=0}).map(function(r){return r.unregister()}))}):Promise.resolve()).catch(function(){}).then(function(){location.replace('/bruebuch-/')});
 </script></body></html>
